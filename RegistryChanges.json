@@ -1,0 +1,11 @@
+[
+	{
+		"RegistryKey": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
+		"ValueNames": [
+			"DefaultDomainName",
+			"DefaultPassword",
+			"DefaultUserName",
+			"AutoAdminLogon"
+		]
+	}
+]
