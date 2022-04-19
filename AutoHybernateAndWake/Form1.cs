@@ -31,6 +31,7 @@ namespace AutoHybernateAndWake
             config.sleepTime = SleepTimePicker.Value;
 
             Loader.SaveConfig(config);
+            Scheduler.SetScheduleUsingConfig();
         }
 
         private void SaveAutoLogonPassword_Click(object sender, EventArgs e)
