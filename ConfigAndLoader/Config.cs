@@ -11,6 +11,7 @@ namespace ConfigAndLoader
     {
         public DateTime sleepTime = DateOnly.FromDateTime(DateTime.Now).ToDateTime(new TimeOnly(21, 0, 0));
         public DateTime wakeTime = DateOnly.FromDateTime(DateTime.Now).ToDateTime(new TimeOnly(9, 0, 0));
+        public bool enableRestart = false;
         public bool monday = true;
         public bool tuesday = true;
         public bool wednesday = true;

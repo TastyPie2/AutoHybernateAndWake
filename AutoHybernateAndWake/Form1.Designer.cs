@@ -55,6 +55,7 @@
             this.TestRestartButton = new System.Windows.Forms.Button();
             this.TestSleepButton = new System.Windows.Forms.Button();
             this.TestWakeButton = new System.Windows.Forms.Button();
+            this.AutoRestartCheckbox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.SleepAndWakeTab.SuspendLayout();
             this.AutoLogonTab.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             // SleepAndWakeTab
             // 
+            this.SleepAndWakeTab.Controls.Add(this.AutoRestartCheckbox);
             this.SleepAndWakeTab.Controls.Add(this.SundayCheckbox);
             this.SleepAndWakeTab.Controls.Add(this.SaturedayCheckbox);
             this.SleepAndWakeTab.Controls.Add(this.FridayCheckbox);
@@ -206,7 +208,7 @@
             // 
             // SleepAndWakeDisableButton
             // 
-            this.SleepAndWakeDisableButton.Location = new System.Drawing.Point(6, 177);
+            this.SleepAndWakeDisableButton.Location = new System.Drawing.Point(6, 202);
             this.SleepAndWakeDisableButton.Name = "SleepAndWakeDisableButton";
             this.SleepAndWakeDisableButton.Size = new System.Drawing.Size(75, 23);
             this.SleepAndWakeDisableButton.TabIndex = 7;
@@ -216,7 +218,7 @@
             // 
             // SleepAndWakeEnableButton
             // 
-            this.SleepAndWakeEnableButton.Location = new System.Drawing.Point(6, 148);
+            this.SleepAndWakeEnableButton.Location = new System.Drawing.Point(6, 173);
             this.SleepAndWakeEnableButton.Name = "SleepAndWakeEnableButton";
             this.SleepAndWakeEnableButton.Size = new System.Drawing.Size(75, 23);
             this.SleepAndWakeEnableButton.TabIndex = 6;
@@ -226,7 +228,7 @@
             // 
             // SaveSleepWakeTime
             // 
-            this.SaveSleepWakeTime.Location = new System.Drawing.Point(6, 119);
+            this.SaveSleepWakeTime.Location = new System.Drawing.Point(6, 144);
             this.SaveSleepWakeTime.Name = "SaveSleepWakeTime";
             this.SaveSleepWakeTime.Size = new System.Drawing.Size(75, 23);
             this.SaveSleepWakeTime.TabIndex = 5;
@@ -353,11 +355,21 @@
             this.TestWakeButton.UseVisualStyleBackColor = true;
             this.TestWakeButton.Click += new System.EventHandler(this.TestWakeButton_Click);
             // 
+            // AutoRestartCheckbox
+            // 
+            this.AutoRestartCheckbox.AutoSize = true;
+            this.AutoRestartCheckbox.Location = new System.Drawing.Point(11, 119);
+            this.AutoRestartCheckbox.Name = "AutoRestartCheckbox";
+            this.AutoRestartCheckbox.Size = new System.Drawing.Size(88, 19);
+            this.AutoRestartCheckbox.TabIndex = 22;
+            this.AutoRestartCheckbox.Text = "AutoRestart";
+            this.AutoRestartCheckbox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 254);
+            this.ClientSize = new System.Drawing.Size(570, 300);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "AutoHybernateAndWake";
@@ -401,5 +413,6 @@
         private Button TestSleepButton;
         private Button TestWakeButton;
         private ProgressBar TestProgressbar;
+        private CheckBox AutoRestartCheckbox;
     }
 }

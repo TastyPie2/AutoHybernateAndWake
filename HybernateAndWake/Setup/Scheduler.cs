@@ -70,17 +70,22 @@ namespace HybernateAndWake.Setup
                 taskService.RootFolder.RegisterTaskDefinition(wakeTaskName, wakeTask);
                 wakeTask.Dispose();
 
-                //Restart
-                TaskDefinition restartTask = MakeTask(wakeDays.Value, config.wakeTime + TimeSpan.FromMinutes(30), "shutdown /r /t 60", ref taskService);
-                taskService.RootFolder.RegisterTaskDefinition(restartTaskName, restartTask);
-                restartTask.Dispose();
+                if (config.enableRestart)
+                {
+                    //Restart
+                    TaskDefinition restartTask = MakeTask(wakeDays.Value, config.wakeTime + TimeSpan.FromMinutes(30), "shutdown /r /t 60", ref taskService);
+                    taskService.RootFolder.RegisterTaskDefinition(restartTaskName, restartTask);
+                    restartTask.Dispose();
+                }
+                else
+                {
+                    taskService.RootFolder.DeleteTask(restartTaskName, false);
+                }
 
                 //Sleep
                 TaskDefinition sleepTask = MakeTask(DaysOfTheWeek.AllDays, config.sleepTime, "shutdown /h", ref taskService);
                 taskService.RootFolder.RegisterTaskDefinition(sleepTaskName, sleepTask);
                 sleepTask.Dispose();
-
-                ValidateExistance();
             }
             else
             {
@@ -120,26 +125,6 @@ namespace HybernateAndWake.Setup
             taskService.RootFolder.DeleteTask(wakeTaskTestName, false);
             taskService.RootFolder.DeleteTask(sleepTaskTestName, false);
             taskService.RootFolder.DeleteTask(restartTaskTestName, false);
-        }
-
-        static void ValidateExistance()
-        {
-            using TaskService taskService = new TaskService();
-            
-            if(taskService.FindTask(wakeTaskName) == null)
-            {
-                throw new Exception();
-            }
-
-            if(taskService.FindTask(sleepTaskName) == null)
-            {
-                throw new Exception();
-            }
-
-            if(taskService.FindTask(restartTaskName) == null)
-            {
-                throw new Exception();
-            }
         }
 
         static void ConfigureWakeTaskSettings(ref TaskDefinition definition)

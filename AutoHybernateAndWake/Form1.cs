@@ -24,6 +24,7 @@ namespace AutoHybernateAndWake
             config.friday = FridayCheckbox.Checked;
             config.saturday = SaturedayCheckbox.Checked;
             config.sunday = SundayCheckbox.Checked;
+            config.enableRestart = AutoRestartCheckbox.Checked;
 
             //Times
             config.wakeTime = WakeTimePicker.Value;
@@ -128,6 +129,7 @@ namespace AutoHybernateAndWake
             FridayCheckbox.Checked = config.friday;
             SaturedayCheckbox.Checked = config.saturday;
             SundayCheckbox.Checked = config.sunday;
+            AutoRestartCheckbox.Checked = config.enableRestart;
 
             WakeTimePicker.Value = config.wakeTime;
             SleepTimePicker.Value = config.sleepTime;

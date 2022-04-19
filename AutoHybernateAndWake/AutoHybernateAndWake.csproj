@@ -14,4 +14,10 @@
     <ProjectReference Include="..\HybernateAndWake\HybernateAndWake.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
