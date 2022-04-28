@@ -16,7 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{C8B7D120
 		RegistryChanges.json = RegistryChanges.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Installer", "Installer\Installer.csproj", "{7BC4F166-C2BB-4928-A0D3-F3DCC1E4757A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Installer", "Installer\Installer.csproj", "{7BC4F166-C2BB-4928-A0D3-F3DCC1E4757A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoHybernateAndWakeService", "AutoHybernateAndWakeService\AutoHybernateAndWakeService.csproj", "{6E57748D-05AE-41FA-AE42-6D23DFFAF218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "Updater\Updater.csproj", "{BEA59DC4-C75B-4405-9DE2-41FD782DAB91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,14 @@ Global
 		{7BC4F166-C2BB-4928-A0D3-F3DCC1E4757A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BC4F166-C2BB-4928-A0D3-F3DCC1E4757A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BC4F166-C2BB-4928-A0D3-F3DCC1E4757A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E57748D-05AE-41FA-AE42-6D23DFFAF218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E57748D-05AE-41FA-AE42-6D23DFFAF218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E57748D-05AE-41FA-AE42-6D23DFFAF218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E57748D-05AE-41FA-AE42-6D23DFFAF218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA59DC4-C75B-4405-9DE2-41FD782DAB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA59DC4-C75B-4405-9DE2-41FD782DAB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA59DC4-C75B-4405-9DE2-41FD782DAB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA59DC4-C75B-4405-9DE2-41FD782DAB91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
